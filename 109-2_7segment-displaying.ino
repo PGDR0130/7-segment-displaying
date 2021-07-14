@@ -1,6 +1,6 @@
 /*
 109-2 多元選修 微控制器應用 最後學習成果報告+紀錄
-by.11311 張哲誠 (2021/7/11)
+by.11311 張哲誠 (2021/7/14) 最後檢查
 七段顯示器顯示 溫度+濕度
 */
 #include "DHT.h"
@@ -175,7 +175,7 @@ void loop(){
     }
     
   else if (mode == 3){
-    number_list(floor(temp*(9/5)+32));
+    number_list(int(floor(temp*(9.0/5.0)+32)));
 
     int check_out = wait_true_out(state, delay_time, 2);
     if (check_out == 1) state += 1;
